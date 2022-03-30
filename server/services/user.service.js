@@ -12,7 +12,7 @@ module.exports = {
 
     deleteUserById: (userId) => {
         const removeIndex = db.findIndex( item => item.id === db[userId] )
-        return removeIndex
-        console.log(removeIndex)
+        db.filter(user => removeIndex === db[userId])
+        console.log(`removed index ${removeIndex}`)
     }
 };
