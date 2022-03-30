@@ -21,9 +21,7 @@ module.exports = {
 
     deleteUserById: (req, res) => {
         const { user } = req;
-
-        userService.deleteUserById(user.name);
-
+        userService.deleteUserById(user.id);
         res.status(204).json(user)
     }
 }
